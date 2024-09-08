@@ -1,0 +1,43 @@
+# Node modules directory
+node_modules/
+./node_modules
+
+# Environment variables file in the config folder
+config/.env
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build and coverage directories
+dist/
+coverage/
+
+# Dependency directories for other package managers (if applicable)
+package-lock.json
+yarn.lock
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# NPM and Yarn debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Miscellaneous
+*.tgz
+*.gzip

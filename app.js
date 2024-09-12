@@ -4,9 +4,10 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import fileUpload from 'express-fileupload';
 import { dbConnection } from './Database/dbConnection.js';
+import { errorMiddleware } from './middleware/error.js';
 import messageRouter from './router/messageRouter.js'
 import userRouter from './router/userRouter.js'
-import { errorMiddleware } from './middleware/error.js';
+import appointmentRouter from './router/appointmentRouter.js';
 
 const app = express();
 config ({path : "./config/.env"})
@@ -27,7 +28,8 @@ app.use(fileUpload({
 }))
 
 app.use("/api/v1/message", messageRouter);
-app.use("/api/v1/user", userRouter)
+app.use("/api/v1/user", userRouter);
+app.use("/api/v1/appointment", appointmentRouter);
 
 dbConnection();
 

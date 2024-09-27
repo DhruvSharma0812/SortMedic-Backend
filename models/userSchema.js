@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
 
     Aadhar: {
         type: String,
-        required: [true, "NIC Is Required!"],
+        required: [true, "Aadhar Is Required!"],
         minLength: [12, "Aadhar Must Contain Only 12 Digits!"],
         maxLength: [12, "Aadhar Must Contain Only 12 Digits!"],
     },
